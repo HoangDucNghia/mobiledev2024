@@ -2,6 +2,7 @@ package vn.edu.usth.weather;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 
@@ -13,11 +14,15 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 
+
 public class WeatherActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_weather);
+        WeatherFragment firstFragment = new WeatherFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.main,firstFragment).commit();
         /*EdgeToEdge.enable(this);
          setContentView(R.layout.activity_weather);
          View main = findViewById(R.id.main);
@@ -27,6 +32,9 @@ public class WeatherActivity extends AppCompatActivity {
          v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
          return insets;
          });**/
+    }
+    public WeatherActivity(){
+        super();
     }
     @Override
     protected void onStart(){

@@ -7,16 +7,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-import org.w3c.dom.Text;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ForecastFragment#newInstance} factory method to
+ * Use the {@link WeatherFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ForecastFragment extends Fragment {
+public class WeatherFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +25,7 @@ public class ForecastFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ForecastFragment() {
+    public WeatherFragment() {
         // Required empty public constructor
     }
 
@@ -40,8 +38,8 @@ public class ForecastFragment extends Fragment {
      * @return A new instance of fragment WeatherFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ForecastFragment newInstance(String param1, String param2) {
-        ForecastFragment fragment = new ForecastFragment();
+    public static WeatherFragment newInstance(String param1, String param2) {
+        WeatherFragment fragment = new WeatherFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,22 +59,7 @@ public class ForecastFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //Inflate the layout for this fragment
-        //View view = inflater.inflate(R.layout.fragment_forecast, container, false);
-        //view.setBackgroundColor(0x20FF0000);
-        //return view;
-        /*LinearLayout linearLayout = new LinearLayout(getContext());
-         linearLayout.setOrientation(LinearLayout.VERTICAL);
-         linearLayout.setBackgroundColor(0x2000FF00);
-         TextView thursdayTextView = new TextView(getContext());
-         thursdayTextView.setText("Thursday");
-         thursdayTextView.setTextSize(20);
-         thursdayTextView.setPadding(30,30,30,30);
-         ImageView thursdayImageView = new ImageView(getContext());
-         thursdayImageView.setImageResource(R.drawable.rain);
-         thursdayImageView.setPadding(30,30,30,30);
-         linearLayout.addView(thursdayTextView);
-         linearLayout.addView(thursdayImageView);**/
-         return inflater.inflate(R.layout.fragment_forecast, container, false);
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_weather, container, false);
     }
 }

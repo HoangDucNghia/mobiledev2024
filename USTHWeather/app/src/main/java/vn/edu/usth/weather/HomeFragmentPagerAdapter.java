@@ -24,14 +24,17 @@ public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int page) {
     // returns an instance of Fragment corresponding to the specified page
         switch (page) {
-            default: return new WeatherAndForecastFragment();
+            case 0: return new WeatherAndForecastFragment();
+            case 1: return new WeatherAndForecastFragment();
+            case 2: return new WeatherAndForecastFragment();
         }
+        return null;
     }
-
 
     @Override
     public CharSequence getPageTitle(int page) {
 // returns a tab title corresponding to the specified page
         return titles[page];
     }
+
 }

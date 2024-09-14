@@ -22,7 +22,7 @@
             android:textSize="25sp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:layout_marginStarter="15dp"/>
+            android:layout_marginStart="15dp"/>
 
     </LinearLayout>
 

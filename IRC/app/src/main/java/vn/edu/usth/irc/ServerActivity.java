@@ -21,6 +21,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 

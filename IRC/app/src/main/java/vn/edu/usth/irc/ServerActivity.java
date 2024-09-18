@@ -1,8 +1,10 @@
 package vn.edu.usth.irc;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -10,8 +12,7 @@ import android.widget.TextView;
 import android.view.View;
 import android.app.Fragment;
 import android.view.LayoutInflater;
-import android.widget.ListView;
-import android.widget.SearchView;
+import android.view.MenuItem;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +23,8 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 
 import java.util.ArrayList;
 
@@ -29,7 +32,7 @@ public class ServerActivity extends AppCompatActivity {
     private ViewPager viewpager;
     private PagerAdapter pageradapter;
     @Override
-    protected void onCreate (Bundle savedInstanceState){
+    protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_server);
         /*ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
